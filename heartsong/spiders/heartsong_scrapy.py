@@ -67,7 +67,7 @@ class HeartsongSpider(Spider):
         if not table:
             # 这个链接内没有一个楼层，说明此主题贴可能被删了，
             # 把这类url保存到一个文件里，以便审查原因
-            print "bad url!"
+            print("bad url!")
             f = open('badurl.txt', 'a')
             f.write(response.url)
             f.write('\n')
@@ -98,12 +98,12 @@ class HeartsongSpider(Spider):
         pages = selector.xpath('//*[@id="pgt"]/div/div/label/span')
         if pages:  # 如果pages不是空列表，说明该主题帖分页
             pages = pages[0].re(r'[0-9]+')[0]  # 正则匹配出总页数
-            print "This post has", pages, "pages"
+            print("This post has", pages, "pages")
             # response.url格式： http://www.heartsong.top/forum.php?mod=viewthread&tid=34
             # 子utl格式： http://www.heartsong.top/forum.php?mod=viewthread&tid=34&page=1
             tmp = response.url.split('=')  # 以=分割url
             # 循环生成所有子页面的请求
-            for page_num in xrange(2, int(pages) + 1):
+            for page_num in range(2, int(pages) + 1):
                 # 构造新的url
                 sub_url = tmp[0] + '=' + tmp[1] + '=' + tmp[2] + 'page=' + str(page_num)
                 # 注意此处的回调函数是self.sub_parse,就是说这个请求的response会传到

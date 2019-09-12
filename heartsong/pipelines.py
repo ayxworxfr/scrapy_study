@@ -9,5 +9,5 @@ class HeartsongPipeline(object):
         file.write(item_string)
         file.write('\n')
         file.close()
-        print item_string  #在控制台输出
+        print(item_string)  #在控制台输出
         return item  # 会在控制台输出原item数据，可以选择不写
