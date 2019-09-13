@@ -26,15 +26,21 @@ logger.setLevel(logging.INFO)
 class DbManager:
     # 构造函数
     def __init__(self, host='127.0.0.1', port=3306, user='root',
-                 passwd='123456', db='taotao', charset='utf8'):
-        config = configparser.ConfigParser()
-        config.read("../config/mysql.ini")
-        self.host = config.get("connectString", "host")
-        self.port = int(config.get("connectString", "port"))
-        self.user = config.get("connectString", "user")
-        self.passwd = config.get("connectString", "passwd")
-        self.db = config.get("connectString", "db")
-        self.charset = config.get("connectString", "charset")
+                 passwd='123456', db='video', charset='utf8'):
+        # config = configparser.ConfigParser()
+        # config.read("../config/mysql.ini")
+        # self.host = config.get("connectString", "host")
+        # self.port = int(config.get("connectString", "port"))
+        # self.user = config.get("connectString", "user")
+        # self.passwd = config.get("connectString", "passwd")
+        # self.db = config.get("connectString", "db")
+        # self.charset = config.get("connectString", "charset")
+        self.host = host
+        self.port = port
+        self.user = user
+        self.passwd = passwd
+        self.db = db
+        self.charset = charset
         self.conn = None
         self.cur = None
 
@@ -147,3 +153,6 @@ if __name__ == '__main__':
     sql = "select username,password from user;"
     result = dbManager.fetchall(sql)
     """
+
+    sql = "select username,password from user;"
+    result = dbManager.fetchall(sql)
