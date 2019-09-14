@@ -14,6 +14,8 @@ BOT_NAME = 'video_hunt'
 SPIDER_MODULES = ['video_hunt.spiders']
 NEWSPIDER_MODULE = 'video_hunt.spiders'
 
+# 设置日志级别
+# LOG_LEVEL = "WARNING"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'video_hunt (+http://www.yourdomain.com)'

@@ -36,3 +36,166 @@
 2019-09-13 19:58:43,066              INFO    :操作成功1
 2019-09-13 19:58:43,074              INFO    :操作成功1
 2019-09-13 19:58:43,083              INFO    :操作成功1
+2019-09-14 13:22:18,029              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 13:22:18,130              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 13:22:18,140              INFO    :查询失败
+2019-09-14 13:50:35,660              INFO    :操作成功1
+2019-09-14 13:50:35,696              INFO    :操作成功1
+2019-09-14 13:51:04,625              INFO    :操作成功1
+2019-09-14 15:43:01,627              INFO    :操作成功1
+2019-09-14 15:43:01,764              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:43:01,766              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:43:01,777              INFO    :查询失败
+2019-09-14 15:47:56,338              INFO    :操作成功1
+2019-09-14 15:47:56,346              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:47:56,347              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:47:56,348              INFO    :查询失败
+2019-09-14 15:47:56,361              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:47:56,362              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:47:56,363              INFO    :查询失败
+2019-09-14 15:52:28,385              INFO    :操作成功1
+2019-09-14 15:52:28,394              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:52:28,396              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:52:28,398              INFO    :查询失败
+2019-09-14 15:52:28,427              INFO    :查询成功(2,)
+2019-09-14 15:54:04,827              INFO    :操作成功1
+2019-09-14 15:54:04,830              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:54:04,831              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:54:04,832              INFO    :查询失败
+2019-09-14 15:54:04,837              INFO    :查询成功(2,)
+2019-09-14 15:56:58,984              INFO    :操作成功1
+2019-09-14 15:56:58,995              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:56:58,996              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:56:58,998              INFO    :查询失败
+2019-09-14 15:56:59,012              INFO    :查询成功(2,)
+2019-09-14 15:57:51,087              INFO    :操作成功1
+2019-09-14 15:57:51,100              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:57:51,106              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:57:51,107              INFO    :查询失败
+2019-09-14 15:57:51,117              INFO    :查询成功(2,)
+2019-09-14 16:01:10,524              INFO    :操作成功1
+2019-09-14 16:01:10,530              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 16:01:10,532              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 16:01:10,533              INFO    :查询失败
+2019-09-14 16:05:46,767              INFO    :操作成功1
+2019-09-14 16:05:46,793              INFO    :操作成功1
+2019-09-14 16:05:46,822              INFO    :操作成功1
+2019-09-14 16:05:46,840              INFO    :操作成功1
+2019-09-14 16:05:46,853              INFO    :操作成功1
+2019-09-14 16:05:46,864              INFO    :操作成功1
+2019-09-14 16:05:46,876              INFO    :操作成功1
+2019-09-14 16:05:46,894              INFO    :操作成功1
+2019-09-14 16:05:46,905              INFO    :操作成功1
+2019-09-14 16:05:46,914              INFO    :操作成功1
+2019-09-14 16:05:46,932              INFO    :操作成功1
+2019-09-14 16:05:46,942              INFO    :操作成功1
+2019-09-14 16:07:04,496              INFO    :查询成功(2,)
+2019-09-14 16:07:04,503              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,504              ERROR   :params: ['第01集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/1.html', 2]
+2019-09-14 16:07:04,511              INFO    :操作失败
+2019-09-14 16:07:04,524              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,524              ERROR   :params: ['第02集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/2.html', 2]
+2019-09-14 16:07:04,525              INFO    :操作失败
+2019-09-14 16:07:04,529              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,530              ERROR   :params: ['第03集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/3.html', 2]
+2019-09-14 16:07:04,531              INFO    :操作失败
+2019-09-14 16:07:04,535              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,536              ERROR   :params: ['第04集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/4.html', 2]
+2019-09-14 16:07:04,537              INFO    :操作失败
+2019-09-14 16:07:04,542              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,543              ERROR   :params: ['第05集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/5.html', 2]
+2019-09-14 16:07:04,544              INFO    :操作失败
+2019-09-14 16:07:04,548              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,548              ERROR   :params: ['第06集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/6.html', 2]
+2019-09-14 16:07:04,550              INFO    :操作失败
+2019-09-14 16:07:04,556              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,556              ERROR   :params: ['第07集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/7.html', 2]
+2019-09-14 16:07:04,557              INFO    :操作失败
+2019-09-14 16:07:04,561              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,562              ERROR   :params: ['第08集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/8.html', 2]
+2019-09-14 16:07:04,562              INFO    :操作失败
+2019-09-14 16:07:04,568              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,569              ERROR   :params: ['第09集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/9.html', 2]
+2019-09-14 16:07:04,570              INFO    :操作失败
+2019-09-14 16:07:04,590              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,590              ERROR   :params: ['第10集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/10.html', 2]
+2019-09-14 16:07:04,591              INFO    :操作失败
+2019-09-14 16:07:04,595              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,595              ERROR   :params: ['第11集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/11.html', 2]
+2019-09-14 16:07:04,596              INFO    :操作失败
+2019-09-14 16:07:04,609              ERROR   :execute failed: insert into source_detail(title, url,source_id) values(%s,%s);
+2019-09-14 16:07:04,610              ERROR   :params: ['第12集', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/play/id/53349/sid/1/nid/12.html', 2]
+2019-09-14 16:07:04,611              INFO    :操作失败
+2019-09-14 16:08:11,396              INFO    :查询成功(2,)
+2019-09-14 16:08:11,438              INFO    :操作成功1
+2019-09-14 16:08:11,453              INFO    :操作成功1
+2019-09-14 16:08:11,466              INFO    :操作成功1
+2019-09-14 16:08:11,479              INFO    :操作成功1
+2019-09-14 16:08:11,492              INFO    :操作成功1
+2019-09-14 16:08:11,507              INFO    :操作成功1
+2019-09-14 16:08:11,521              INFO    :操作成功1
+2019-09-14 16:08:11,541              INFO    :操作成功1
+2019-09-14 16:08:11,550              INFO    :操作成功1
+2019-09-14 16:08:11,560              INFO    :操作成功1
+2019-09-14 16:08:11,569              INFO    :操作成功1
+2019-09-14 16:08:11,578              INFO    :操作成功1
+2019-09-14 16:10:53,083              INFO    :查询失败
+2019-09-14 16:10:53,185              INFO    :操作成功1
+2019-09-14 16:10:53,189              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 16:10:53,197              ERROR   :params: ['陈情令', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/48487.html']
+2019-09-14 16:10:53,202              INFO    :查询失败
+2019-09-14 16:11:37,250              INFO    :查询成功(9,)
+2019-09-14 16:11:37,293              INFO    :操作成功1
+2019-09-14 16:11:37,306              INFO    :操作成功1
+2019-09-14 16:11:37,335              INFO    :操作成功1
+2019-09-14 16:11:37,350              INFO    :操作成功1
+2019-09-14 16:11:37,353              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 16:11:37,354              ERROR   :params: ['陈情令', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/48487.html']
+2019-09-14 16:11:37,355              INFO    :查询失败
+2019-09-14 16:11:37,364              INFO    :操作成功1
+2019-09-14 16:11:37,379              INFO    :操作成功1
+2019-09-14 16:11:37,390              INFO    :操作成功1
+2019-09-14 16:11:37,409              INFO    :操作成功1
+2019-09-14 16:11:37,420              INFO    :操作成功1
+2019-09-14 16:11:37,431              INFO    :操作成功1
+2019-09-14 16:11:37,443              INFO    :操作成功1
+2019-09-14 16:11:37,452              INFO    :操作成功1
+2019-09-14 16:11:37,463              INFO    :操作成功1
+2019-09-14 16:11:37,475              INFO    :操作成功1
+2019-09-14 16:11:37,485              INFO    :操作成功1
+2019-09-14 16:11:37,501              INFO    :操作成功1
+2019-09-14 16:11:37,509              INFO    :操作成功1
+2019-09-14 16:11:37,519              INFO    :操作成功1
+2019-09-14 16:11:37,527              INFO    :操作成功1
+2019-09-14 16:11:37,538              INFO    :操作成功1
+2019-09-14 16:11:37,548              INFO    :操作成功1
+2019-09-14 16:11:37,558              INFO    :操作成功1
+2019-09-14 16:11:37,573              INFO    :操作成功1
+2019-09-14 16:11:37,580              INFO    :操作成功1
+2019-09-14 16:11:37,592              INFO    :操作成功1
+2019-09-14 16:11:37,600              INFO    :操作成功1
+2019-09-14 16:11:37,612              INFO    :操作成功1
+2019-09-14 16:11:37,623              INFO    :操作成功1
+2019-09-14 16:11:37,635              INFO    :操作成功1
+2019-09-14 16:11:37,645              INFO    :操作成功1
+2019-09-14 16:11:37,655              INFO    :操作成功1
+2019-09-14 16:11:37,664              INFO    :操作成功1
+2019-09-14 16:11:37,682              INFO    :操作成功1
+2019-09-14 16:11:37,693              INFO    :操作成功1
+2019-09-14 16:11:37,704              INFO    :操作成功1
+2019-09-14 16:11:37,713              INFO    :操作成功1
+2019-09-14 16:11:37,723              INFO    :操作成功1
+2019-09-14 16:11:37,734              INFO    :操作成功1
+2019-09-14 16:11:37,743              INFO    :操作成功1
+2019-09-14 16:11:37,753              INFO    :操作成功1
+2019-09-14 16:11:37,761              INFO    :操作成功1
+2019-09-14 16:11:37,770              INFO    :操作成功1
+2019-09-14 16:11:37,797              INFO    :操作成功1
+2019-09-14 16:11:37,818              INFO    :操作成功1
+2019-09-14 16:11:37,828              INFO    :操作成功1
+2019-09-14 16:11:37,839              INFO    :操作成功1
+2019-09-14 16:11:37,853              INFO    :操作成功1
+2019-09-14 16:11:37,863              INFO    :操作成功1
+2019-09-14 16:11:37,872              INFO    :操作成功1
+2019-09-14 16:11:37,879              INFO    :操作成功1
+2019-09-14 16:11:37,889              INFO    :操作成功1

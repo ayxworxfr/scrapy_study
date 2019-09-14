@@ -1,3 +1,24 @@
 2019-09-12 21:56:24,357              INFO    :查询成功((1, 'java考试', 1, 1, '其中考试', datetime.datetime(2019, 2, 14, 18, 7, 52), datetime.datetime(2019, 2, 14, 18, 7, 54), 1, datetime.datetime(2019, 2, 14, 18, 7, 57), datetime.datetime(2019, 2, 17, 17, 34, 50)), (2, 'linux考试', 2, 1, '期末考试', datetime.datetime(2019, 2, 14, 19, 47, 31), datetime.datetime(2019, 2, 14, 19, 47, 28), 1, datetime.datetime(2019, 2, 14, 19, 47, 25), datetime.datetime(2019, 2, 17, 17, 34, 52)), (3, '考试名称', 3, 1, '描述', datetime.datetime(2019, 2, 15, 15, 39, 11), datetime.datetime(2019, 2, 15, 15, 39, 13), 2, datetime.datetime(2019, 2, 15, 13, 32, 3), datetime.datetime(2019, 2, 17, 17, 34, 55)))
 2019-09-13 15:52:33,795              INFO    :查询成功(('admin', 'EE3120EFDF18F9641397CD691BCC0F51'), ('geely', 'EE3120EFDF18F9641397CD691BCC0F51'), ('rosen', '12345'), ('sooner', '1234'), ('zj', 'EE3120EFDF18F9641397CD691BCC0F51'), ('ymh', 'EE3120EFDF18F9641397CD691BCC0F51'))
 2019-09-13 15:55:06,174              INFO    :查询成功(('admin', 'EE3120EFDF18F9641397CD691BCC0F51'), ('geely', 'EE3120EFDF18F9641397CD691BCC0F51'), ('rosen', '12345'), ('sooner', '1234'), ('zj', 'EE3120EFDF18F9641397CD691BCC0F51'), ('ymh', 'EE3120EFDF18F9641397CD691BCC0F51'))
+2019-09-13 21:31:08,601              ERROR   :execute failed: select * from user;
+2019-09-13 21:31:08,601              ERROR   :params: None
+2019-09-13 21:31:08,602              INFO    :查询失败
+2019-09-13 21:31:36,561              INFO    :查询成功(2, 'zj', '132456', None, None, None, None, None, None)
+2019-09-14 15:49:58,840              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:49:58,860              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:49:58,860              INFO    :查询失败
+2019-09-14 15:50:29,153              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:50:29,153              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:50:29,154              INFO    :操作失败
+2019-09-14 15:50:48,754              ERROR   :execute failed: select id from source where title = %d and url = %d;
+2019-09-14 15:50:48,754              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:51:15,798              ERROR   :execute failed: select * from source where title = %d and url = %d;
+2019-09-14 15:51:15,799              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:51:39,896              ERROR   :execute failed: select * from source where title = %d and url = %d;
+2019-09-14 15:51:39,896              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:51:51,332              ERROR   :execute failed: select * from source where title = %d and url = %d;
+2019-09-14 15:51:51,332              ERROR   :params: ['全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html']
+2019-09-14 15:51:51,333              INFO    :查询失败
+2019-09-14 15:52:06,421              INFO    :查询成功((2, '全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html', None, None, None, None), (3, '全职高手第一季', 'http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html', None, None, None, None))
+2019-09-14 15:53:08,136              INFO    :查询成功(2,)

@@ -1,10 +1,25 @@
 # -*- coding: utf-8 -*-
 
-# import scrapy  # 可以写这句注释下面两句，不过下面要更好
+import scrapy  # 可以写这句注释下面两句，不过下面要更好
+import re
 from scrapy.spiders import Spider
 from scrapy.selector import Selector
-from video_hunt.items import VideoItem  # 此处如果报错是pyCharm的原因
+from video_hunt.items import *  # 此处如果报错是pyCharm的原因
 from scrapy import Request
+
+import sys
+sys.path.append('../../')
+from utils.mysql import DbManager
+
+
+# if __name__ == '__main__':
+#     dbManager = DbManager()
+#     dbManager.setDatabase("taotao")
+#     sql = "select * from user;"
+#     result = dbManager.fetchone(sql)
+#     print(result)
+
+
 
 class VideoSpider(Spider):
     name = "video"
@@ -12,7 +27,7 @@ class VideoSpider(Spider):
     home = "http://byzfwl.zdqbrya.9izhuiju.com"
 
     start_urls = [
-        "http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/53349.html"  # 起始url，此例只爬这个页面
+        "http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/48487.html"  # 起始url，此例只爬这个页面
     ]
 
     # 用来保持登录状态，可把chrome上拷贝下来的字符串形式cookie转化成字典形式，粘贴到此处
@@ -30,7 +45,35 @@ class VideoSpider(Spider):
         'handle_httpstatus_list': [301, 302]  # 对哪些异常返回进行处理
     }
 
-    def parse(self, response):
+
+    '''
+    description: 返回下次迭代的url
+    :param oldUrl: 上一个爬去过的url
+    :return: 下次要爬取的url
+    '''
+    def get_next_url(self, oldUrl):
+        # 传入的url格式：http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/51461.html
+        oldUrl = "http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/51461.html"
+        newUrl = int(re.findall(r'.*?id/(\d+)', oldUrl)[0]) + 1
+        newUrl = "http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/{}.html".format(newUrl)
+        return str(newUrl)  # 返回新的url
+
+
+    def parse_title(self, response):
+        selector = Selector(response)  # 创建选择器
+        title_item = VideoTitleItem()  # 实例化一个Item对象
+        title_item['title'] = selector.xpath('/html/body/div[2]/div/div[1]/div[1]/dl/dd[1]/h1/a/text()').extract()[0]
+        title_item['url'] = self.home + str(selector.xpath('/html/body/div[2]/div/div[1]/div[1]/dl/dd[1]/h1/a/@href').extract()[0])
+        title_item['info'] = self.home + str(selector.xpath('/html/body/div[2]/div/div[1]/div[1]/dl/dd[1]/ul/li[7]/div/text()').extract()[0])
+        print("title_item",title_item)
+        yield title_item
+
+    def parse_item(self, response):
+        db = DbManager()
+        values = [response.url]
+        sql = "select id from source where url = %s;"
+        id = db.fetchone(sql, values)[0]
+
         selector = Selector(response)  # 创建选择器
         table = selector.xpath('/html/body/div[2]/div/div[2]/div/div[1]/div[2]/div[1]/ul[2]//li')  # 取出所有的楼层
         if not table:
@@ -39,27 +82,17 @@ class VideoSpider(Spider):
             return
         for each in table:  # 对于每一个楼层执行下列操作
             item = VideoItem()  # 实例化一个Item对象
+            item['source_id'] = id
             item['title'] = each.xpath('a/text()').extract()[0]
             item['url'] = self.home + str(each.xpath('a/@href').extract()[0])
+            print(item)
             yield item  # 将创建并赋值好的Item对象传递到PipeLine当中进行处理
 
+    def parse(self, response):
+        yield Request(url=response.url, callback=self.parse_title, dont_filter=True)
+        yield Request(url=response.url, callback=self.parse_item, dont_filter=True)
+        # yield scrapy.Request(response.url, callback=self.parse_item, meta={'id':id})
 
-
-
-    '''
-    description: 返回下次迭代的url
-    :param oldUrl: 上一个爬去过的url
-    :return: 下次要爬取的url
-    '''
-    def get_next_url(self, oldUrl):
-        # 传入的url格式：http://www.heartsong.top/forum.php?mod=viewthread&tid=34
-        l = oldUrl.split('=')  #用等号分割字符串
-        oldID = int(l[2])
-        newID = oldID - 1
-        if newID == 0:  # 如果tid迭代到0了，说明网站爬完，爬虫可以结束了
-            return
-        newUrl = l[0] + "=" + l[1] + "=" + str(newID)  #构造出新的url
-        return str(newUrl)  # 返回新的url
 
     """
     这是一个重载函数，它的作用是发出第一个Request请求

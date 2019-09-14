@@ -2,6 +2,7 @@ import pymysql
 import logging
 import sys
 import configparser
+import re
 
 # 加入日志
 # 获取logger实例
@@ -154,5 +155,15 @@ if __name__ == '__main__':
     result = dbManager.fetchall(sql)
     """
 
-    sql = "select username,password from user;"
-    result = dbManager.fetchall(sql)
+    # dbManager.setDatabase("taotao")
+    # sql = "select * from user;"
+    # result = dbManager.fetchone(sql)
+    # print(result)
+
+    # 传入的url格式：http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/51461.html
+    # url = "http://byzfwl.zdqbrya.9izhuiju.com/index.php/vod/detail/id/51461.html"
+    # m = re.findall(r'.*?id/(\d+)', url)
+    # print(m)
+
+    # m = re.match(r'.*?id/(\d+)', url)
+    # print(m.group(1))
